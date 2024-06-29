@@ -252,21 +252,21 @@
             <div class="billing-details">
               <div class="mb-3 form-checkout">
                 <label for="fullname">Họ và tên <span class="required">*</span></label>
-                <input type="text" id="fullname" name="fullname" class="form-control mt-2 mb-4 ps-3 is-invalid">
+                <input type="text" id="fullname" name="fullname" class="form-control mt-2 ps-3 is-invalid">
                 <div class="validate invalid-feedback">
                   Tên không hợp lệ
                 </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="companyname">Tên công ty ( lựa chọn )</label>
-                <input type="text" id="companyname" name="companyname" class="form-control mt-2 mb-4 is-valid">
+                <input type="text" id="companyname" name="companyname" class="form-control mt-2 is-valid">
                 <div class="validate valid-feedback">
                   Tên công ty hợp lệ
                 </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="regionalCountry">Quốc gia / Khu vực <span class="required">*</span></label>
-                <select id="regionalCountry" name="regionalCountry" class="form-select form-control mt-2 mb-4 is-valid" aria-label="Default select example">
+                <select id="regionalCountry" name="regionalCountry" class="form-select form-control mt-2 is-valid" aria-label="Default select example">
                   <option selected>Việt nam</option>
                   <option value="1">UK</option>
                   <option value="2">Australia</option>
@@ -285,21 +285,21 @@
                     Tên công ty hợp lệ
                   </div>
                 <input type="text" id="adr" name="address" placeholder="Căn hộ, dãy phòng..."
-                  class="form-control ps-3 mb-4 is-valid">
+                  class="form-control ps-3 is-valid">
                   <div class="validate valid-feedback">
                     Tên công ty hợp lệ
                   </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="city">Thị trấn / Thành phố <span class="required">*</span></label>
-                <input type="text" id="city" name="city" class="form-control is-valid mt-3 ps-3 mb-4">
+                <input type="text" id="city" name="city" class="form-control is-valid mt-3 ps-3">
                 <div class="validate valid-feedback">
                     Tên công ty hợp lệ
                 </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="district">Quận / Huyện <span class="required">*</span></label>
-                <select id="district" name="district" class="form-select form-control is-valid mt-2 mb-4" aria-label="Default select example">
+                <select id="district" name="district" class="form-select form-control is-valid mt-2" aria-label="Default select example">
                   <option selected="" hidden="">Florida</option>
                   <option value="1">Thủ Thừa</option>
                   <option value="2">Quận 1</option>
@@ -310,21 +310,21 @@
               </div>
               <div class="mb-3 form-checkout">
                 <label for="zip">Zip Code <span class="required">*</span></label>
-                <input type="text" id="zip" name="zip" class="form-control is-valid mt-2 mb-4 ps-3">
+                <input type="text" id="zip" name="zip" class="form-control is-valid mt-2 ps-3">
                 <div class="validate valid-feedback">
                     Tên công ty hợp lệ
                 </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="email">Phone <span class="required">*</span></label>
-                <input type="text" id="phone" name="phone" class="form-control is-valid mt-2 mb-4 ps-3">
+                <input type="text" id="phone" name="phone" class="form-control is-valid mt-2 ps-3">
                 <div class="validate valid-feedback">
                     Tên công ty hợp lệ
                 </div>
               </div>
               <div class="mb-3 form-checkout">
                 <label for="email">Email address <span class="required">*</span></label>
-                <input type="text" id="email" name="email" class="form-control is-valid mt-2 mb-4 ps-3">
+                <input type="text" id="email" name="email" class="form-control is-valid mt-2 ps-3">
                 <div class="validate valid-feedback">
                     Tên công ty hợp lệ
                 </div>
@@ -336,7 +336,7 @@
             <div class="billing-details form-checkout mb-3">
               <label for="fname">Ghi chú đơn hàng ( lựa chọn )</label>
               <textarea class="form-control pt-3 pb-3 ps-3 mt-2"
-                placeholder="Notes about your order. Like special notes for delivery."></textarea>
+                placeholder="Ghi chú về đơn đặt hàng của bạn. Giống như những ghi chú đặc biệt khi giao hàng."></textarea>
             </div>
             <div class="your-order mt-5">
               <h2 class="display-7 text-uppercase text-dark pb-4">Tổng tiền giỏ hàng</h2>
@@ -346,18 +346,18 @@
                     <tr class="subtotal border-top border-bottom pt-2 pb-2 text-uppercase">
                       <th>Subtotal</th>
                       <td data-title="Subtotal">
-                        <span class="price-amount amount text-primary ps-5">
+                        <span class="price-amount amount ps-5 fw-bold">
                           <bdi>
-                            <span class="price-currency-symbol">2,370,000</span>VNĐ </bdi>
+                            <span class="price-currency-symbol">2,370,000</span> VNĐ</bdi>
                         </span>
                       </td>
                     </tr>
                     <tr class="order-total border-bottom pt-2 pb-2 text-uppercase">
                       <th>Total</th>
                       <td data-title="Total">
-                        <span class="price-amount amount text-primary ps-5">
+                        <span class="price-amount amount ps-5 fw-bold">
                           <bdi>
-                            <span class="price-currency-symbol">2,370,000</span>VNĐ </bdi>
+                            <span class="price-currency-symbol">2,370,000</span> VNĐ</bdi>
                         </span>
                       </td>
                     </tr>
@@ -409,7 +409,7 @@
                   </div>
                 </div>
                 <button type="submit" name="submit"
-                  class="btn btn-dark btn-medium text-uppercase btn-rounded-none">Đặt hàng</button>
+                  class="btn submit-order btn-medium text-uppercase btn-rounded-none">Đặt hàng</button>
               </div>
             </div>
           </div>

@@ -425,6 +425,14 @@ header {
     font-style: italic;
 }
 
-.submit-orders {
-    
+.submit-order {
+    background-color: var(--white-color);
+    color: var(--main-new);
+    border: 1px solid var(--main-new);
+    transition: all .3s linear;
+}
+.submit-order:hover {
+    background-color: var(--hover-color);
+    color: var(--white-color);
+    border: 1px solid var(--hover-color);
 }
