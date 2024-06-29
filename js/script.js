@@ -70,7 +70,7 @@
         slidesPerView: 4,
         spaceBetween: 10,
         pagination: {
-          el: "#mobile-products .swiper-pagination",
+          el: "#product-news .swiper-pagination",
           clickable: true,
         },
         breakpoints: {
@@ -89,7 +89,26 @@
         slidesPerView: 4,
         spaceBetween: 10,
         pagination: {
-          el: "#smart-watches .swiper-pagination",
+          el: "#product-bestsellers .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          980: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          }
+        },
+      }); 
+
+      var swiper = new Swiper(".product-sales", {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        pagination: {
+          el: "#product-sales .swiper-pagination",
           clickable: true,
         },
         breakpoints: {
