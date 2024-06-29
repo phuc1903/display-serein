@@ -11,6 +11,7 @@
     --btn-click-color: #B59585;
     --black-color: #000;
     --white-color: #fff;
+    /* --main-new: #e7d0a1; */
     --main-new: #DEAF54;
     --border: 1px solid var(--main-new);
     --border-radius: 8px;
@@ -498,4 +499,56 @@ header {
 .subscription-form input:focus {
     box-shadow: none;
     border: var(--border);
+}
+
+/* Admin */
+
+
+/* Dashboard */
+
+.sider-bar {
+    background-color: var(--white-color);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.siderbar-list .siderbar-item {
+    display: flex;
+    align-items: center;
+}
+
+.siderbar-list .siderbar-item .siderbar-item-icon {
+    display: block;
+    width: 8px;
+    height: 8px;    
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+}
+
+.siderbar-list .siderbar-item .siderbar-item-icon::before{
+    /* position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e7d0a1;
+    z-index: -1; */
+
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(2, 44, 49, .6);
+    z-index: -1;
 }
