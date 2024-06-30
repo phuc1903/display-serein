@@ -558,7 +558,7 @@ header {
 }
 
 .siderbar-admin .siderbar-main .siderbar-list .siderbar-list-content {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 /* siderbar list item */
@@ -677,16 +677,49 @@ header {
     color: var(--white-color);
 }
 
-/* dashboard  */
+/* Dashboard  */
 
-.main-admin {
+/* custom input search dashboard  */
 
+.search-input-wrapper {
+    display: none;
+    width: 100%;
 }
 
-.main-admin .section-dasboard {
-
+.search-input-wrapper input {
+    border: 2px solid var(--main-color) !important;
+    color: var(--black-color) !important;
 }
 
-.main-admin .section-dasboard .section-dasboard-title {
+.search-input-wrapper input:focus {
+    border: 2px solid var(--hover-color) !important;
+}
 
+.search-input-wrapper input::placeholder {
+    color: var(--black-color);
+}
+
+.custom-utilities-dashboard {
+    transition: var(--transition);
+}
+
+.custom-utilities-dashboard:hover {
+    background-color: var(--hover-color) !important;
+    color: var(--hover-color);
+}
+
+.custom-utilities-dashboard:hover span {
+    background-color: rgba(255, 255, 255, .6) !important;
+}
+
+.custom-utilities-dashboard:hover span i {
+    color: var(--hover-color);
+}
+
+.custom-utilities-dashboard:hover .stretched-link {
+    color: var(--white-color) !important;
+}
+
+.custom-utilities-dashboard:hover small {
+    color: rgba(255, 255, 255, .8);
 }
