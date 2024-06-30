@@ -226,13 +226,13 @@
         <div class="container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="siderbar-admin col-lg-3">
-                        <div class="siderbar-main siderbar-admin p-2">
-                            <a class="siderbar-list siderbar-general active" href="#sidebar-dashboard" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar-dashboard">
+                    <div class="siderbar-admin col-lg-3 d-flex d-lg-block">
+                        <div class="siderbar-main siderbar-item-admin p-2">
+                            <a class="accordion-button siderbar-list siderbar-general active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseAdmin">
                                 <span class="siderbar-list-icon siderbar-icon-general"><i class="fa-solid fa-house"></i></span>
                                 <p class="siderbar-list-content siderbar-content-general m-0">Bảng điều khiển</p>
                             </a>
-                            <div class="collapse siderbar-list-item" id="sidebar-dashboard">
+                            <div id="collapseAdmin" class="accordion-collapse collapse show siderbar-list-item" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <ul>
                                     <li>
                                         <a href="#" class="siderbar-item siderbar-general active">
@@ -284,48 +284,54 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="siderbar-main siderbar-user p-2">
-                            <a class="siderbar-list siderbar-general" href="#sidebar-user" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar-user">
+                        <div class="siderbar-main siderbar-item-user p-2">
+                            <a class="accordion-button siderbar-list siderbar-general active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
                                 <span class="siderbar-list-icon siderbar-icon-general"><i class="fa-solid fa-house"></i></span>
-                                <p class="siderbar-list-content siderbar-content-general m-0">Thông tin cá nhân</p>
+                                <p class="siderbar-list-content siderbar-content-general m-0">Tài khoản của bạn</p>
                             </a>
-                            <div class="collapse siderbar-list-item" id="sidebar-user">
+                            <div id="collapseUser" class="accordion-collapse collapse show siderbar-list-item" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <ul>
                                     <li>
-                                        <a class="siderbar-item siderbar-general active">
+                                        <a href="#" class="siderbar-item siderbar-general active">
                                             <span class="siderbar-item-icon siderbar-icon-general"></span>
                                             <p class="siderbar-item-content siderbar-content-general m-0">Thông tin</p>
                                         </a>
-                                    </li>
                                     <li>
-                                        <a class="siderbar-item siderbar-general">
+                                    <li>
+                                        <a href="#" class="siderbar-item siderbar-general">
                                             <span class="siderbar-item-icon siderbar-icon-general"></span>
-                                            <p class="siderbar-item-content siderbar-content-general m-0">Lịch sử đơn hàng</p>
+                                            <p class="siderbar-item-content siderbar-content-general m-0">Lịch sử mua hàng</p>
+                                        </a>
+                                    <li>
+                                        <a href="#" class="siderbar-item siderbar-general">
+                                            <span class="siderbar-item-icon siderbar-icon-general"></span>
+                                            <p class="siderbar-item-content siderbar-content-general m-0">Sản phẩm yêu thích</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="siderbar-item siderbar-general">
-                                            <span class="siderbar-item-icon siderbar-icon-general"></span>
-                                            <p class="siderbar-item-content siderbar-content-general m-0">Danh sách sản phẩm yêu thích</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="siderbar-item siderbar-general">
+                                        <a href="#" class="siderbar-item siderbar-general">
                                             <span class="siderbar-item-icon siderbar-icon-general"></span>
                                             <p class="siderbar-item-content siderbar-content-general m-0">Đổi mật khẩu</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="siderbar-item siderbar-general">
+                                        <a href="#" class="siderbar-item siderbar-general">
                                             <span class="siderbar-item-icon siderbar-icon-general"></span>
                                             <p class="siderbar-item-content siderbar-content-general m-0">Quên mật khẩu</p>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="#" class="siderbar-item siderbar-general">
+                                            <span class="siderbar-item-icon siderbar-icon-general"></span>
+                                            <p class="siderbar-item-content siderbar-content-general m-0">Đăng xuất</p>
+                                        </a>
+                                    </li>
+                                    <li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="main col-lg-9">
+                    <div class="main-admin col-lg-9">
                         
                     </div>
                 </div>

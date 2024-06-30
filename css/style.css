@@ -515,14 +515,40 @@ header {
 
 }
 
+/* handler siderbar list a button  */
+.siderbar-admin .siderbar-main button {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* siderbar of admin */
-.siderbar-admin .siderbar-main.siderbar-admin {
+.siderbar-admin .siderbar-main.siderbar-item-admin {
 
 }
 
 /* siderbar of user */
-.siderbar-admin .siderbar-main.siderbar-user {
+.siderbar-admin .siderbar-main.siderbar-item-user {
     
+}
+
+/* siderbar list  */
+.siderbar-admin .siderbar-main .siderbar-list {
+    box-shadow: none;
+}
+
+/* siderbar list handler affter  */
+
+.siderbar-admin .siderbar-main .siderbar-list::after {
+    transition: var(--transition);
+}
+
+.siderbar-admin .siderbar-main .siderbar-list .siderbar-list-icon {
+    font-size: 1.2rem;
+}
+
+.siderbar-admin .siderbar-main .siderbar-list .siderbar-list-content {
+    font-size: 1.8rem;
 }
 
 /* siderbar list item */
@@ -640,3 +666,7 @@ header {
 .siderbar-admin .siderbar-main .siderbar-list:hover .siderbar-list-icon {
     color: var(--white-color);
 }
+
+/* Main admin  */
+
+
