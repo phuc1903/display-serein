@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/custom.min.css">
+    <link rel="stylesheet" href="scss/custom.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="container-fluid sticky-top bg-transparent">
+        <nav class="navbar navbar-expand-lg h-100">
+            <div class="container h-100">
+                <a class="navbar-brand h-100" href="#">
+                    <img class="d-block img-fluid h-100" src="assets/images/logo3.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-2 text-uppercase">
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="blogs.html">Blogs</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-5 mb-2 mb-lg-0 fs-2">
+                        <!-- <li class="nav-item px-3">
+                            <i class="bi bi-search text-dark"></i>
+                        </li> -->
+                        <li class="nav-item px-3 dropdown">
+                            <i class="bi bi-person text-dark dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"></i>
+                            <ul class="dropdown-menu fs-3">
+                                <li><a class="dropdown-item text-dark" href="info.html">Thông tin tài khoản</a></li>
+                                <li><a class="dropdown-item text-dark" href="login.html">Đăng nhập</a></li>
+                                <li><a class="dropdown-item text-dark" href="register.html">Đăng ký</a></li>
+                                <li><a class="dropdown-item text-dark" href="order.html">Đơn hàng của tôi</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-dark" href="#">Quản trị website</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-dark" href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a href="cart.html">
+                                <i class="bi bi-bag-dash text-dark"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section d-flex justify-content-center">
+        <form class="form">
+            <div class="mb-3">
+                <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+                <input type="text" class="form-control input fs-5" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Vui lòng nhập số điện thoại">
+                <div id="phoneHelp" class="form-text"></div>
+              </div>
+            <div class="mb-3">
+              <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+              <input type="email" class="form-control input fs-5" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vui lòng nhập email">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+              <input type="password" class="form-control input fs-5" id="exampleInputPassword1" placeholder="Vui lòng nhập mật khẩu">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <hr>
+            <button type="submit" class="w-100 fs-2 btn btn-secondary">Đăng ký</button>
+            <div class="content text-center mt-4">
+                <span class="text-dark fs-5 mb-3 d-block">Tôi đã có tài khoản. <a class="text-secondary link-offset-2" href="login.html">Đăng nhập</a></span>
+                <span>Bằng cách đăng nhập, bạn đồng ý với Chính sách quyền riêng tư của chúng tôi và Điều khoản sử dụng.</span>
+            </div>
+          </form>
+    </section>
+
+    <footer class="section container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                    <a href="index.html" class="text-uppercase text-dark text-decoration-none fs-1 fw-semibold d-block mb-3">Serein</a>
+                    <span class="fs-4">Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</span>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-lg-0 mb-5">
+                    <ul class="list-unstyled text-uppercase fs-1 fw-semibold">QuickLinks
+                        <li><a href="index.html" class="text-dark fs-4 fw-normal text-decoration-none">home</a></li>
+                        <li><a href="about.html" class="text-dark fs-4 fw-normal text-decoration-none">about</a></li>
+                        <li><a href="shop.html" class="text-dark fs-4 fw-normal text-decoration-none">shop</a></li>
+                        <li><a href="blogs.html" class="text-dark fs-4 fw-normal text-decoration-none">blogs</a></li>
+                        <li><a href="contact.html" class="text-dark fs-4 fw-normal text-decoration-none">contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-lg-0 mb-5">
+                    <ul class="list-unstyled text-uppercase fs-1 fw-semibold">HELP & INFO
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">TRACK YOUR ORDER
+                        </a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">RETURNS POLICIES</a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">SHIPPING + DELIVERY</a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">CONTACT US</a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">FAQS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                    <ul class="list-unstyled text-uppercase fs-1 fw-semibold">HELP & INFO
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">Do you have any queries or suggestions?
+                        </a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-bold text-decoration-none">YOURINFO@GMAIL.COM</a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-normal text-decoration-none">If you need support? Just give us a call.</a></li>
+                        <li><a href="#" class="text-dark fs-4 fw-bold text-decoration-none">+84 377 461 482</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
