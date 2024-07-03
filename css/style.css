@@ -223,7 +223,7 @@ header {
 }
 
 @media (max-width: 991.98px) {
-    .product-list-show .product-item  {
+    .product-list-show .product-item {
         padding: 12px 6px;
     }
 
@@ -363,11 +363,10 @@ header {
 .carts input:focus {
     border: 1px solid var(--hover-color);
     box-shadow: none;
-} 
+}
 
 .carts .product-carts .product-item-bottom button.btn-like,
-.carts .product-carts .product-item-bottom button.btn-add
- {
+.carts .product-carts .product-item-bottom button.btn-add {
     background-color: var(--main-new);
     border: 1px solid var(--main-new);
     color: var(--white-color);
@@ -394,7 +393,7 @@ header {
 }
 
 .product-right .product-voucher .produc-input-voucher {
-    height: 40px;  
+    height: 40px;
 }
 
 .product-right .product-voucher .produc-input-voucher .produc-input-voucher-value {
@@ -440,15 +439,14 @@ header {
 
 /* Checkout */
 
-.form-checkout {
-
-}
+.form-checkout {}
 
 .form-checkout .required {
     color: red;
     font-size: 1.6rem;
     font-weight: bold;
 }
+
 .form-checkout textarea,
 .form-checkout input,
 .form-checkout select,
@@ -460,7 +458,7 @@ header {
 
 .form-checkout select::placeholder,
 .form-checkout input::placeholder,
-.form-checkout textarea::placeholder{
+.form-checkout textarea::placeholder {
     font-size: 1.4rem;
 }
 
@@ -482,6 +480,7 @@ header {
     border: 1px solid var(--main-new);
     transition: var(--transition);
 }
+
 .submit-order:hover {
     background-color: var(--hover-color);
     color: var(--white-color);
@@ -520,9 +519,7 @@ header {
 }
 
 /* siderbar main */
-.siderbar-admin .siderbar-main {
-
-}
+.siderbar-admin .siderbar-main {}
 
 /* handler siderbar list a button  */
 .siderbar-admin .siderbar-main button {
@@ -532,14 +529,10 @@ header {
 }
 
 /* siderbar of admin */
-.siderbar-admin .siderbar-main.siderbar-item-admin {
-
-}
+.siderbar-admin .siderbar-main.siderbar-item-admin {}
 
 /* siderbar of user */
-.siderbar-admin .siderbar-main.siderbar-item-user {
-    
-}
+.siderbar-admin .siderbar-main.siderbar-item-user {}
 
 /* siderbar list  */
 .siderbar-admin .siderbar-main .siderbar-list {
@@ -613,7 +606,7 @@ header {
 .siderbar-admin .siderbar-main .siderbar-item .siderbar-item-icon {
     display: block;
     width: 8px;
-    height: 8px;    
+    height: 8px;
     background-color: var(--main-color);
     border-radius: 50%;
     position: relative;
@@ -668,7 +661,7 @@ header {
 }
 
 /* siderbar general hover handler content general  */
-.siderbar-admin .siderbar-main .siderbar-general:hover .siderbar-content-general{
+.siderbar-admin .siderbar-main .siderbar-general:hover .siderbar-content-general {
     color: var(--white-color);
 }
 
@@ -722,4 +715,89 @@ header {
 
 .custom-utilities-dashboard:hover small {
     color: rgba(255, 255, 255, .8);
+}
+
+/* Details  */
+
+.product-detail {
+
+}
+
+.product-detail .product-detail-image {
+    height: 400px;
+}
+
+.product-detail .product-detail-image img {
+    border-radius: var(--border-radius);
+}
+
+.product-detail .product-detail-main .product-detail-main-title {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.product-detail .product-detail-main .product-detail-main-price {
+    color: var(--main-new) !important;
+}
+
+.product-detail .product-detail-main .product-detail-main-sizes {
+}
+
+.product-detail .product-detail-main .product-detail-main-sizes .size {
+    padding: 4px 8px;
+    background-color: var(--white-color);
+    border: 1px solid var(--main-new);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.product-detail .product-detail-main .product-detail-main-sizes .size.active,
+.product-detail .product-detail-main .product-detail-main-sizes .size:hover {
+    background-color: var(--hover-color);
+    border: var(--border);
+    color: var(--white-color);
+}
+
+
+.thumbnail .img{
+    height: 200px;
+    cursor: pointer;
+}
+
+.thumbnail .img:hover .img-thumbnail {
+    transform: scale(1.5);
+}
+
+.thumbnail .img .img-thumbnail {
+    transition: var(--transition);
+    object-fit: cover;
+}
+
+.detail-quantity {
+    height: 40px;
+}
+
+.detail-quantity input {
+    width: 90px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--main-new);
+}
+
+.detail-quantity input:focus-visible {
+    border: 1px solid var(--hover-color);
+}
+
+.count-down .main {
+    background-color: #022C31;
+
+}
+
+.form {
+    width: 300px;
+    height: auto;
+}
+
+.input {
+    height: 40px;
 }
