@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr"
+  data-theme="theme-default" data-assets-path="assets/" data-template="vertical-menu-template">
+
+<head>
+  <title>Manager products</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/all.min.css" />
+  <!-- script
+    ================================================== -->
+
+  <!-- Dashboard -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-5J3LMKC");
+  </script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="../../vendor/fonts/tabler-icons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../../css/rtl/core.css" class="template-customizer-core-css" />
+
+  <!-- reponsive nav dashboard  -->
+  <link rel="stylesheet" href="../../css/rtl/theme-default.css" class="template-customizer-theme-css" />
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <title>Search</title>
+      <path fill="currentColor"
+        d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 16 16">
+      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 16 16">
+      <path
+        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+    <svg xmlns="http://www.w3.org/2000/svg" id="chevron-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+    </svg>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="cart-outline" viewBox="0 0 16 16">
+      <path
+        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="quality" viewBox="0 0 16 16">
+      <path
+        d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z" />
+      <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="price-tag" viewBox="0 0 16 16">
+      <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z" />
+      <path
+        d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="shield-plus" viewBox="0 0 16 16">
+      <path
+        d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+      <path
+        d="M8 4.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5a.5.5 0 0 1 .5-.5z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="star-fill" viewBox="0 0 16 16">
+      <path
+        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="star-empty" viewBox="0 0 16 16">
+      <path
+        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="star-half" viewBox="0 0 16 16">
+      <path
+        d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="quote" viewBox="0 0 24 24">
+      <path fill="currentColor" d="m15 17l2-4h-4V6h7v7l-2 4h-3Zm-9 0l2-4H4V6h7v7l-2 4H6Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="M29.41 9.26a3.5 3.5 0 0 0-2.47-2.47C24.76 6.2 16 6.2 16 6.2s-8.76 0-10.94.59a3.5 3.5 0 0 0-2.47 2.47A36.13 36.13 0 0 0 2 16a36.13 36.13 0 0 0 .59 6.74a3.5 3.5 0 0 0 2.47 2.47c2.18.59 10.94.59 10.94.59s8.76 0 10.94-.59a3.5 3.5 0 0 0 2.47-2.47A36.13 36.13 0 0 0 30 16a36.13 36.13 0 0 0-.59-6.74ZM13.2 20.2v-8.4l7.27 4.2Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 256 256">
+      <path fill="currentColor"
+        d="m245.66 77.66l-29.9 29.9C209.72 177.58 150.67 232 80 232c-14.52 0-26.49-2.3-35.58-6.84c-7.33-3.67-10.33-7.6-11.08-8.72a8 8 0 0 1 3.85-11.93c.26-.1 24.24-9.31 39.47-26.84a110.93 110.93 0 0 1-21.88-24.2c-12.4-18.41-26.28-50.39-22-98.18a8 8 0 0 1 13.65-4.92c.35.35 33.28 33.1 73.54 43.72V88a47.87 47.87 0 0 1 14.36-34.3A46.87 46.87 0 0 1 168.1 40a48.66 48.66 0 0 1 41.47 24H240a8 8 0 0 1 5.66 13.66Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 256 256">
+      <path fill="currentColor"
+        d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="nav-icon" viewBox="0 0 16 16">
+      <path
+        d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+      <path
+        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+      <path
+        d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+    </symbol>
+  </svg>
+
+  <div class="search-popup">
+    <div class="search-popup-container">
+      <form role="search" method="get" class="search-form" action="">
+        <input type="search" id="search-form" class="search-field" placeholder="Nhập tìm kiếm của bạn" value=""
+          name="s" />
+        <button type="submit" class="search-submit">
+          <svg class="search">
+            <use xlink:href="#search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <h5 class="cat-list-title">Các danh mục</h5>
+
+      <ul class="cat-list">
+        <!-- List Categories -->
+        <li class="cat-list-item">
+          <a href="#" title="Mobile Phones">Mobile Phones</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Smart Watches">Smart Watches</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Headphones">Headphones</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Accessories">Accessories</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Monitors">Monitors</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Speakers">Speakers</a>
+        </li>
+        <li class="cat-list-item">
+          <a href="#" title="Memory Cards">Memory Cards</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="siderbar-admin col-lg-3 col-md-4 mb-5">
+          <a class="branch mb-4 d-block w-100" href="">
+            <img class="w-100 h-100" src="../../img/logo3.png" alt="" />
+          </a>
+          <div class="">
+            <div class="siderbar-main siderbar-item-admin p-2">
+              <a class="accordion-button siderbar-list siderbar-general active" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseAdmin">
+                <span class="siderbar-list-icon siderbar-icon-general"><i class="fa-solid fa-house"></i></span>
+                <p class="siderbar-list-content siderbar-content-general m-0">
+                  Bảng điều khiển
+                </p>
+              </a>
+              <div id="collapseAdmin" class="accordion-collapse collapse show siderbar-list-item"
+                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <ul>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Dashboard
+                      </p>
+                    </a>
+                  </li>
+
+                  <li></li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general active">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý sản phẩm
+                      </p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý danh mục
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý bình luận
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý tài khoản khách hàng
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý đơn hàng
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý banner
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quản lý voucher
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="siderbar-main siderbar-item-user p-2">
+              <a class="accordion-button siderbar-list siderbar-general active" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+                <span class="siderbar-list-icon siderbar-icon-general">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+                <p class="siderbar-list-content siderbar-content-general m-0">
+                  Tài khoản của bạn
+                </p>
+              </a>
+              <div id="collapseUser" class="accordion-collapse collapse siderbar-list-item" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <ul>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general active">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Thông tin
+                      </p>
+                    </a>
+                  </li>
+
+                  <li></li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Lịch sử mua hàng
+                      </p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Sản phẩm yêu thích
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Đổi mật khẩu
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Quên mật khẩu
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="siderbar-item siderbar-general">
+                      <span class="siderbar-item-icon siderbar-icon-general"></span>
+                      <p class="siderbar-item-content siderbar-content-general m-0">
+                        Đăng xuất
+                      </p>
+                    </a>
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-admin col-lg-9 col-md-8 mb-5">
+          <nav class="w-100 layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item navbar-search-wrapper mb-0">
+                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="#">
+                    <i class="ti ti-search ti-md me-2"></i>
+                    <!-- <span class="d-none d-md-inline-block text-muted"
+                        >Search (Ctrl+/)</span
+                      > -->
+                  </a>
+                </div>
+              </div>
+              <!-- /Search -->
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Style Switcher -->
+                <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
+                    <i class="ti ti-md"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                    <li>
+                      <a class="dropdown-item" href="#" data-theme="light">
+                        <span class="align-middle"><i class="ti ti-sun me-2"></i>Light</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-theme="dark">
+                        <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-theme="system">
+                        <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- / Style Switcher-->
+
+                <!-- Quick links  -->
+                <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside" aria-expanded="false">
+                    <i class="ti ti-layout-grid-add ti-md"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end py-0">
+                    <div class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">Tiện ích</h5>
+                      </div>
+                    </div>
+                    <div class="dropdown-shortcuts-list scrollable-container">
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-calendar fs-4"></i>
+                          </span>
+                          <a href="app-calendar.html" class="stretched-link">Danh sách sản phẩm</a>
+                          <small class="text-muted mb-0">12 sản phẩm</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-file-invoice fs-4"></i>
+                          </span>
+                          <a href="app-invoice-list.html" class="stretched-link">Hóa đơn giao dịch</a>
+                          <small class="text-muted mb-0">12 hóa đơn</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-users fs-4"></i>
+                          </span>
+                          <a href="app-user-list.html" class="stretched-link">User App</a>
+                          <small class="text-muted mb-0">Manage Users</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-lock fs-4"></i>
+                          </span>
+                          <a href="app-access-roles.html" class="stretched-link">Role Management</a>
+                          <small class="text-muted mb-0">Permission</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-chart-bar fs-4"></i>
+                          </span>
+                          <a href="index.html" class="stretched-link">Dashboard</a>
+                          <small class="text-muted mb-0">User Profile</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-settings fs-4"></i>
+                          </span>
+                          <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
+                          <small class="text-muted mb-0">Account Settings</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-help fs-4"></i>
+                          </span>
+                          <a href="pages-faq.html" class="stretched-link">FAQs</a>
+                          <small class="text-muted mb-0">FAQs & Articles</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col custom-utilities-dashboard">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-square fs-4"></i>
+                          </span>
+                          <a href="modal-examples.html" class="stretched-link">Modals</a>
+                          <small class="text-muted mb-0">Useful Popups</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- Quick links -->
+
+                <!-- Notification -->
+                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside" aria-expanded="false">
+                    <i class="ti ti-bell ti-md"></i>
+                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end py-0">
+                    <li class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">Notification</h5>
+                        <a href="javascript:void(0)" class="dropdown-notifications-all text-body"
+                          data-bs-toggle="tooltip" data-bs-placement="top" title="Mark all as read"><i
+                            class="ti ti-mail-opened fs-4"></i></a>
+                      </div>
+                    </li>
+                    <li class="dropdown-notifications-list scrollable-container">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../img/default.jpg" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Congratulation Lettie 🎉</h6>
+                              <p class="mb-0">
+                                Won the monthly best seller gold badge
+                              </p>
+                              <small class="text-muted">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Charles Franklin</h6>
+                              <p class="mb-0">Accepted your connection</p>
+                              <small class="text-muted">12hr ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">New Message ✉️</h6>
+                              <p class="mb-0">
+                                You have new message from Natalie
+                              </p>
+                              <small class="text-muted">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"><i
+                                    class="ti ti-shopping-cart"></i></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">
+                                Whoo! You have new order 🛒
+                              </h6>
+                              <p class="mb-0">
+                                ACME Inc. made new order $1,154
+                              </p>
+                              <small class="text-muted">1 day ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">
+                                Application has been approved 🚀
+                              </h6>
+                              <p class="mb-0">
+                                Your ABC project application has been
+                                approved.
+                              </p>
+                              <small class="text-muted">2 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"><i
+                                    class="ti ti-chart-pie"></i></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">
+                                Monthly report is generated
+                              </h6>
+                              <p class="mb-0">
+                                July monthly financial report is generated
+                              </p>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Send connection request</h6>
+                              <p class="mb-0">
+                                Peter sent you connection request
+                              </p>
+                              <small class="text-muted">4 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">New message from Jane</h6>
+                              <p class="mb-0">
+                                Your have new message from Jane
+                              </p>
+                              <small class="text-muted">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-warning"><i
+                                    class="ti ti-alert-triangle"></i></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">CPU is running high</h6>
+                              <p class="mb-0">
+                                CPU Utilization Percent is currently at
+                                88.63%,
+                              </p>
+                              <small class="text-muted">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"><span
+                                  class="badge badge-dot"></span></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"><span
+                                  class="ti ti-x"></span></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu-footer border-top">
+                      <a href="#"
+                        class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center">
+                        View all notifications
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Notification -->
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="../img/default.jpg" alt class="h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="../img/default.jpg" alt class="h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-billing.html">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span
+                            class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20">2</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper">
+              <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..."
+                aria-label="Search..." id="search-input" />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="py-3 mb-2">
+                <span class="text-muted fw-light">Admin /</span> Danh sách sản phẩm
+              </h4>
+
+              <div class="app-ecommerce-category">
+                <!-- Category List Table -->
+                <div class="card">
+                  <div class="card-datatable table-responsive">
+                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                      <div class="card-header d-flex flex-wrap pb-2 justify-content-between">
+                        <div>
+                          <div id="DataTables_Table_0_filter" class="dataTables_filter me-3 ps-0">
+                            <label>
+                              <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                                aria-controls="DataTables_Table_0">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-md-end align-items-baseline">
+                          <div
+                            class="dt-action-buttons d-flex justify-content-center flex-md-row mb-3 mb-md-0 ps-1 ms-1 align-items-baseline pt-0">
+                            <div class="dataTables_length" id="DataTables_Table_0_length">
+                              <label>
+                                <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
+                                  class="form-select">
+                                  <option selected value="7">Danh mục</option>
+                                  <option value="10">Nhẫn bạc</option>
+                                  <option value="20">Nhẫn vàng</option>
+                                  <option value="50">Nhẫn kim cương</option>
+                                  <option value="70">Vòng tay</option>
+                                  <option value="100">Dây chuyền</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="dt-buttons btn-group flex-wrap">
+                              <button class="btn btn-secondary add-new btn-primary ms-2 waves-effect waves-light"
+                                tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasEcommerceCategoryList">
+                                <span>
+                                  <i class="ti ti-plus ti-xs me-0 me-sm-2">
+                                  </i>
+                                  <span class="d-none d-sm-inline-block">Thêm sản phẩm</span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <table class="datatables-category-list table border-top dataTable no-footer dtr-column"
+                        id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+                        <thead>
+                          <tr>
+                            <th class="control sorting_disabled dtr-hidden" rowspan="1" colspan="1"
+                              style="width: 0px; display: none;" aria-label=""></th>
+                            <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all" rowspan="1"
+                              colspan="1" style="width: 18px;" data-col="1" aria-label="">
+                              <input type="checkbox" class="form-check-input">
+                            </th>
+                            <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                              colspan="1" style="width: 494px;"
+                              aria-label="Categories: activate to sort column ascending" aria-sort="descending">
+                              Sản phẩm
+                            </th>
+                            <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                              colspan="1" style="width: 494px;"
+                              aria-label="Categories: activate to sort column ascending" aria-sort="descending">
+                              Danh mục
+                            </th>
+                            <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                              colspan="1" style="width: 494px;"
+                              aria-label="Categories: activate to sort column ascending" aria-sort="descending">
+                              Giá
+                            </th>
+                            <th class="text-nowrap text-sm-end sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                              rowspan="1" colspan="1" style="width: 145px;"
+                              aria-label="Total Products &amp;nbsp;: activate to sort column ascending">
+                              Trạng thái
+                            </th>
+                            <th class="text-lg-center sorting_disabled" rowspan="1" colspan="1" style="width: 73px;"
+                              aria-label="Actions">
+                              Hành động
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="odd">
+                            <td class="  control" tabindex="0" style="display: none;"></td>
+                            <td class="  dt-checkboxes-cell">
+                              <input type="checkbox" class="dt-checkboxes form-check-input">
+                            </td>
+                            <td class="sorting_1">
+                              <div class="d-flex align-items-center">
+                                <div class="avatar-wrapper">
+                                  <div class="avatar avatar me-2 rounded-2 bg-label-secondary">
+                                    <img src="../../img/bong-tai-bac-3.png" alt="Product-9" class="rounded-2">
+                                  </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                  <h6 class="text-body text-nowrap mb-0">Áo khoác Nike đẹp ơi là đẹp :3</h6>
+                                  <small class="text-muted text-truncate d-none d-sm-block">Tồn kho: 0 <b>|</b> Thương
+                                    hiệu: Nike</small>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="text-truncate d-flex align-items-center">
+                                <span
+                                  class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-success me-2"><i
+                                    class="ti ti-shoe ti-xs"></i></span>Shoes
+                              </span>
+                            </td>
+                            <td>
+                              <div class="h6 mb-0">$7912.99</div>
+                            </td>
+                            <td>
+                              <span class="badge bg-label-danger" text-capitalized="">Hết hàng</span>
+                            </td>
+                            <td>
+                              <div class="d-inline-block text-nowrap">
+                                <button class="btn btn-sm btn-icon">
+                                  <i class="ti ti-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-icon delete-record"><i class="ti ti-trash"></i></button>
+                                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                  data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
+                                <div class="dropdown-menu dropdown-menu-end m-0">
+                                  <a href="javascript:0;" class="dropdown-item">View</a>
+                                  <a href="javascript:0;" class="dropdown-item">Suspend</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="odd">
+                            <td class="  control" tabindex="0" style="display: none;"></td>
+                            <td class="  dt-checkboxes-cell">
+                              <input type="checkbox" class="dt-checkboxes form-check-input">
+                            </td>
+                            <td class="sorting_1">
+                              <div class="d-flex align-items-center">
+                                <div class="avatar-wrapper">
+                                  <div class="avatar avatar me-2 rounded-2 bg-label-secondary">
+                                    <img src="../../img/bong-tai-bac-3.png" alt="Product-9" class="rounded-2">
+                                  </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                  <h6 class="text-body text-nowrap mb-0">Áo khoác Nike đẹp ơi là đẹp :3</h6>
+                                  <small class="text-muted text-truncate d-none d-sm-block">Tồn kho: 0 <b>|</b> Thương
+                                    hiệu: Nike</small>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="text-truncate d-flex align-items-center">
+                                <span
+                                  class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-success me-2"><i
+                                    class="ti ti-shoe ti-xs"></i></span>Shoes
+                              </span>
+                            </td>
+                            <td>
+                              <div class="h6 mb-0">$7912.99</div>
+                            </td>
+                            <td>
+                              <span class="badge bg-label-danger" text-capitalized="">Hết hàng</span>
+                            </td>
+                            <td>
+                              <div class="d-inline-block text-nowrap">
+                                <button class="btn btn-sm btn-icon">
+                                  <i class="ti ti-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-icon delete-record"><i class="ti ti-trash"></i></button>
+                                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                  data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
+                                <div class="dropdown-menu dropdown-menu-end m-0">
+                                  <a href="javascript:0;" class="dropdown-item">View</a>
+                                  <a href="javascript:0;" class="dropdown-item">Suspend</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mx-2 align-items-center py-3">
+                        <div class="col-sm-12 col-md-6">
+                          <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
+                            Showing 1 to 7 of 14 entries</div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                          <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                            <ul class="pagination mb-0 align-items-center justify-content-end">
+                              <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                                <a aria-controls="DataTables_Table_0" aria-disabled="true" role="link"
+                                  data-dt-idx="previous" tabindex="-1" class="page-link">Previous</a>
+                              </li>
+                              <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="DataTables_Table_0" role="link" aria-current="page"
+                                  data-dt-idx="0" tabindex="0" class="page-link">1</a>
+                              </li>
+                              <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="1" tabindex="0"
+                                  class="page-link">2</a>
+                              </li>
+                              <li class="paginate_button page-item next" id="DataTables_Table_0_next">
+                                <a href="#" aria-controls="DataTables_Table_0" role="link" data-dt-idx="next"
+                                  tabindex="0" class="page-link">Next</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Offcanvas to add new customer -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEcommerceCategoryList"
+                  aria-labelledby="offcanvasEcommerceCategoryListLabel">
+                  <!-- Offcanvas Header -->
+                  <div class="offcanvas-header py-4">
+                    <h5 id="offcanvasEcommerceCategoryListLabel" class="offcanvas-title">Add Category</h5>
+                    <button type="button" class="btn-close bg-label-secondary text-reset" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+                  </div>
+                  <!-- Offcanvas Body -->
+                  <div class="offcanvas-body border-top">
+                    <form class="pt-0 fv-plugins-bootstrap5 fv-plugins-framework" id="eCommerceCategoryListForm"
+                      onsubmit="return true" novalidate="novalidate">
+                      <!-- Title -->
+                      <div class="mb-3 fv-plugins-icon-container">
+                        <label class="form-label" for="ecommerce-category-title">Title</label>
+                        <input type="text" class="form-control" id="ecommerce-category-title"
+                          placeholder="Enter category title" name="categoryTitle" aria-label="category title">
+                        <div
+                          class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                        </div>
+                      </div>
+                      <!-- Slug -->
+                      <div class="mb-3 fv-plugins-icon-container">
+                        <label class="form-label" for="ecommerce-category-slug">Slug</label>
+                        <input type="text" id="ecommerce-category-slug" class="form-control" placeholder="Enter slug"
+                          aria-label="slug" name="slug">
+                        <div
+                          class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                        </div>
+                      </div>
+                      <!-- Image -->
+                      <div class="mb-3">
+                        <label class="form-label" for="ecommerce-category-image">Attachment</label>
+                        <input class="form-control" type="file" id="ecommerce-category-image">
+                      </div>
+                      <!-- Parent category -->
+                      <div class="mb-3 ecommerce-select2-dropdown">
+                        <label class="form-label" for="ecommerce-category-parent-category">Parent category</label>
+                        <div class="position-relative"><select id="ecommerce-category-parent-category"
+                            class="select2 form-select select2-hidden-accessible"
+                            data-placeholder="Select parent category"
+                            data-select2-id="ecommerce-category-parent-category" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="2">Select parent Category</option>
+                            <option value="Household">Household</option>
+                            <option value="Management">Management</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Office">Office</option>
+                            <option value="Automotive">Automotive</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            data-select2-id="1" style="width: 335.428px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                aria-labelledby="select2-ecommerce-category-parent-category-container"><span
+                                  class="select2-selection__rendered"
+                                  id="select2-ecommerce-category-parent-category-container" role="textbox"
+                                  aria-readonly="true"><span class="select2-selection__placeholder">Select parent
+                                    category</span></span><span class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                              aria-hidden="true"></span></span></div>
+                      </div>
+                      <!-- Description -->
+                      <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <div class="form-control p-0 py-1">
+                          <div class="comment-editor border-0 ql-container ql-snow" id="ecommerce-category-description">
+                            <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
+                              data-placeholder="Enter category description...">
+                              <p><br></p>
+                            </div>
+                            <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                            <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2"
+                                data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a
+                                class="ql-remove"></a></div>
+                          </div>
+                          <div class="comment-toolbar border-0 ql-toolbar ql-snow">
+                            <div class="d-flex justify-content-end">
+                              <span class="ql-formats me-0">
+                                <button class="ql-bold" type="button"><svg viewBox="0 0 18 18">
+                                    <path class="ql-stroke"
+                                      d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                    </path>
+                                    <path class="ql-stroke"
+                                      d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                    </path>
+                                  </svg></button>
+                                <button class="ql-italic" type="button"><svg viewBox="0 0 18 18">
+                                    <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
+                                    <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
+                                    <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
+                                  </svg></button>
+                                <button class="ql-underline" type="button"><svg viewBox="0 0 18 18">
+                                    <path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3">
+                                    </path>
+                                    <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect>
+                                  </svg></button>
+                                <button class="ql-list" value="ordered" type="button"><svg viewBox="0 0 18 18">
+                                    <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line>
+                                    <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line>
+                                    <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line>
+                                    <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line>
+                                    <path class="ql-fill"
+                                      d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                    </path>
+                                    <path class="ql-stroke ql-thin"
+                                      d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path>
+                                    <path class="ql-stroke ql-thin"
+                                      d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                    </path>
+                                  </svg></button>
+                                <button class="ql-list" value="bullet" type="button"><svg viewBox="0 0 18 18">
+                                    <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line>
+                                    <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line>
+                                    <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line>
+                                    <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line>
+                                    <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line>
+                                    <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line>
+                                  </svg></button>
+                                <button class="ql-link" type="button"><svg viewBox="0 0 18 18">
+                                    <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+                                    <path class="ql-even ql-stroke"
+                                      d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                    </path>
+                                    <path class="ql-even ql-stroke"
+                                      d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                    </path>
+                                  </svg></button>
+                                <button class="ql-image" type="button"><svg viewBox="0 0 18 18">
+                                    <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect>
+                                    <circle class="ql-fill" cx="6" cy="7" r="1"></circle>
+                                    <polyline class="ql-even ql-fill" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12">
+                                    </polyline>
+                                  </svg></button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <!-- Status -->
+                      <div class="mb-4 ecommerce-select2-dropdown">
+                        <label class="form-label">Select category status</label>
+                        <div class="position-relative"><select id="ecommerce-category-status"
+                            class="select2 form-select select2-hidden-accessible"
+                            data-placeholder="Select category status" data-select2-id="ecommerce-category-status"
+                            tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="4">Select category status</option>
+                            <option value="Scheduled">Scheduled</option>
+                            <option value="Publish">Publish</option>
+                            <option value="Inactive">Inactive</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            data-select2-id="3" style="width: 335.428px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-disabled="false"
+                                aria-labelledby="select2-ecommerce-category-status-container"><span
+                                  class="select2-selection__rendered" id="select2-ecommerce-category-status-container"
+                                  role="textbox" aria-readonly="true"><span
+                                    class="select2-selection__placeholder">Select category status</span></span><span
+                                  class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                              aria-hidden="true"></span></span></div>
+                      </div>
+                      <!-- Submit and reset -->
+                      <div class="mb-3">
+                        <button type="submit"
+                          class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light">Add</button>
+                        <button type="reset" class="btn bg-label-danger" data-bs-dismiss="offcanvas">Discard</button>
+                      </div>
+                      <input type="hidden">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content wrapper -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="footer-top-area">
+          <div class="row d-flex flex-wrap justify-content-between">
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <img src="../../img/logo3.png" alt="logo" />
+                <p>
+                  Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit
+                  hendrerit. Gravida massa volutpat aenean odio erat nullam
+                  fringilla.
+                </p>
+                <div class="social-links">
+                  <ul class="d-flex list-unstyled">
+                    <li>
+                      <a href="#">
+                        <svg class="facebook">
+                          <use xlink:href="#facebook" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg class="instagram">
+                          <use xlink:href="#instagram" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg class="twitter">
+                          <use xlink:href="#twitter" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg class="linkedin">
+                          <use xlink:href="#linkedin" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg class="youtube">
+                          <use xlink:href="#youtube" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 pb-3">
+              <div class="footer-menu text-uppercase">
+                <h5 class="widget-title pb-2">Quick Links</h5>
+                <ul class="menu-list list-unstyled text-uppercase">
+                  <li class="menu-item pb-2">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Shop</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Blogs</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <div class="footer-menu text-uppercase">
+                <h5 class="widget-title pb-2">Help & Info Help</h5>
+                <ul class="menu-list list-unstyled">
+                  <li class="menu-item pb-2">
+                    <a href="#">Track Your Order</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Returns Policies</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Shipping + Delivery</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Faqs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <div class="footer-menu contact-item">
+                <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+                <p>
+                  Do you have any queries or suggestions?
+                  <a href="mailto:">yourinfo@gmail.com</a>
+                </p>
+                <p>
+                  If you need support? Just give us a call.
+                  <a href="">+55 111 222 333 44</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </footer>
+  <div id="footer-bottom">
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-between">
+        <div class="col-md-4 col-sm-6">
+          <div class="Shipping d-flex">
+            <p>We ship with:</p>
+            <div class="card-wrap ps-2">
+              <img src="../../images/dhl.png" alt="visa" />
+              <img src="../../images/shippingcard.png" alt="mastercard" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="payment-method d-flex">
+            <p>Payment options:</p>
+            <div class="card-wrap ps-2">
+              <img src="../../images/visa.jpg" alt="visa" />
+              <img src="../../images/mastercard.jpg" alt="mastercard" />
+              <img src="../../images/paypal.jpg" alt="paypal" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="copyright">
+            <p>
+              © Copyright 2023 MiniStore. Design by
+              <a href="https://templatesjungle.com/">TemplatesJungle</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="../../js/plugins.js"></script>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../../js/custom-dashboard.js"></script>
+</body>
+
+</html>

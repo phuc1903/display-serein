@@ -801,3 +801,9 @@ header {
 .input {
     height: 40px;
 }
+
+/* add product  */
+
+.form-add-product label {
+    font-size: 1.2rem;
+}
